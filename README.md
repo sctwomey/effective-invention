@@ -12,7 +12,7 @@ N/A
 
 ## Usage
 
-The webpage can be found here: 
+The webpage can be found here: https://sctwomey.github.io/effective-invention/
 
 ## Credits
 
