@@ -79,7 +79,7 @@ function generatePassword() {
   } else if (hasSymbolCharacters) {
     userSelection = symbolCharacters;
 
-  } else {
+  } else if (hasNumbers) {
     userSelection = numberCharacters;
   };
 
