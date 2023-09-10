@@ -33,6 +33,56 @@ function generatePassword() {
   // Validates whether a user wants symbols.
   var hasSymbolCharacters = confirm("Do you want any symbols in your password? If so, click OK! If not, click Cancel!");
 
+  // Placeholder for the user choice based on responses from the prompts and confirms.
+  var userSelection;
+
+  // Conditionals for combining user choices based on prompt selections.
+  if (hasNumbers && hasLowerCaseLetters && hasUpperCaseLetters && hasSymbolCharacters) {
+    userSelection = numberCharacters.concat(lowerCharacters, upperCharacters, symbolCharacters);
+
+  } else if (hasNumbers && hasLowerCaseLetters && hasUpperCaseLetters) {
+    userSelection = numberCharacters.concat(lowerCharacters, upperCharacters);
+
+  } else if (hasNumbers && hasLowerCaseLetters && hasSymbolCharacters) {
+    userSelection = numberCharacters.concat(lowerCharacters, symbolCharacters);
+
+  } else if (hasNumbers && hasUpperCaseLetters && hasSymbolCharacters) {
+    userSelection = numberCharacters.concat(upperCharacters, symbolCharacters);
+
+  } else if (hasNumbers && hasLowerCaseLetters) {
+    userSelection = numberCharacters.concat(lowerCharacters);
+
+  } else if (hasNumbers && hasUpperCaseLetters) {
+    userSelection = numberCharacters.concat(upperCharacters);
+
+  } else if (hasNumbers && hasSymbolCharacters) {
+    userSelection = numberCharacters.concat(symbolCharacters);
+
+  } else if (hasLowerCaseLetters && hasUpperCaseLetters && hasSymbolCharacters) {
+    userSelection = lowerCharacters.concat(upperCharacters, symbolCharacters);
+
+  } else if (hasLowerCaseLetters && hasUpperCaseLetters) {
+    userSelection = lowerCharacters.concat(upperCharacters);
+
+  } else if (hasLowerCaseLetters && hasSymbolCharacters) {
+    userSelection = lowerCharacters.concat(hasSymbolCharacters);
+
+  } else if (hasUpperCaseLetters && hasSymbolCharacters) {
+    userSelection = upperCharacters.concat(symbolCharacters);
+
+  } else if (hasLowerCaseLetters) {
+    userSelection = lowerCharacters;
+
+  } else if (hasUpperCaseLetters) {
+    userSelection = upperCharacters;
+
+  } else if (hasSymbolCharacters) {
+    userSelection = symbolCharacters;
+
+  } else {
+    userSelection = numberCharacters;
+  };
+
 }
 
 // Write password to the #password input
