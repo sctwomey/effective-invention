@@ -105,5 +105,16 @@ function writePassword() {
 
 }
 
+// Copy password to clipboard (w3schools.com).
+function copyPassword() {
+  var copyText = document.querySelector("#password");
+  copyText.select();
+
+  navigator.clipboard.writeText(copyText.value);
+
+  alert("Copied Password: " + copyText.value);
+
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
