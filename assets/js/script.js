@@ -83,7 +83,18 @@ function generatePassword() {
     userSelection = numberCharacters;
   };
 
-}
+  // Placeholder for the user password.
+  var userPassword = "";
+
+  // Iterates over the elements in the strings, randomly selecting elements from each string. Then, pushing those elements into the userPassword variable as a new string.
+  for (var i = 0; i < passwordLength; i++) {
+    var selection = userSelection[Math.floor(Math.random() * userSelection.length)];
+    userPassword += selection;
+  }
+
+  return userPassword;
+};
+
 
 // Write password to the #password input
 function writePassword() {
